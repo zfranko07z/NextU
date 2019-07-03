@@ -13,21 +13,20 @@
 </head>
 
 <body>
-  <video src="img/video.mp4" id="vidFondo"></video>
 
   <div class="contenedor">
     <div class="card rowTitulo">
       <h1>Buscador</h1>
     </div>
     <div class="colFiltros">
-      <form action="buscador.php" method="post" id="formulario">
+      <form id="formulario">
         <div class="filtrosContenido">
           <div class="tituloFiltros">
             <h5>Realiza una búsqueda personalizada</h5>
           </div>
           <div class="filtroCiudad input-field">
             <label for="selectCiudad">Ciudad:</label>
-            <select name="ciudad" id="selectCiudad">
+            <select name="ciudad" id="selectCiudad" class="selectCiudad">
               <option value="" selected>Elige una ciudad</option>
             </select>
           </div>
@@ -62,5 +61,6 @@
   <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
 </body>
 </html>
