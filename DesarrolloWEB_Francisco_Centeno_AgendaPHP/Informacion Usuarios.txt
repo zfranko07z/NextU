@@ -1,0 +1,8 @@
+Importa la base de datos agenda_db.sql en phpmyadmin.
+               
+
+Inicia sesion con los siguientes nombres de usuarios:
+
+alejandro@mail.com, carlos@mail.com y usuario@mail.com
+
+las contraseña por defecto es 1234
