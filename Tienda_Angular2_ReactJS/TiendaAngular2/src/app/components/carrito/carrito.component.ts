@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { ChangeDetectorRef } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router'; //Inyectar el componente router para manejar redirecciones URL

@@ -1,4 +1,4 @@
-import {  Component, OnInit } from '@angular/core'; 
+import {  Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms'; //Importar los componentes ForModule, FormControl y Validator para manejar y validar los formularios
 import { CurrencyPipe } from '@angular/common'

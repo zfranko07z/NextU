@@ -3,5 +3,5 @@ export class ProductoCarrito {
   descripcion : string;
   imagen: string;
   precio: number;
-  cantidad: number; 
+  cantidad: number;
 }

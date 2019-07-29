@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms'; //Importar los componentes ForModule, FormControl y Validator para manejar y validar los formularios
 import { AngularFire, FirebaseListObservable } from 'angularfire2'; //Importar los componentes AngularFire y FirebaseListObservable
 import { Router } from '@angular/router';
