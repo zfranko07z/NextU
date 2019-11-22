@@ -1,0 +1,11 @@
+  <nav>
+      <div class="nav-wrapper fondogris">
+        <a class="brand-logo grey-text text-darken-3">La Bodega</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a [routerLink]="['/tienda']"><i class="material-icons grey-text text-darken-3">view_module</i></a></li>
+          <li><span style="color: #f7f6f6; font-size: 1.2em" *ngIf="this.itemsDelCarrito.contadorCarrito() > 0" class="badge red"> ' '  {{this.itemsDelCarrito.contadorCarrito()}}</span><a [routerLink]="['/carrito']" class="text-shadow active" [ngClass]="{active : (this.url == 'carrito') }"><i class="material-icons grey-text text-darken-3">shopping_cart</i></a></li>
+          <li><a><i class="material-icons grey-text text-darken-3">inbox</i></a></li>
+          <li><a [routerLink]="['/app-root']"><i class="material-icons grey-text text-darken-3">assignment_return</i></a></li>
+        </ul>
+      </div>
+  </nav>

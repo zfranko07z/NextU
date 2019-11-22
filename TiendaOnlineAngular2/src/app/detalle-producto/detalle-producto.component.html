@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col l10 offset-l1">
+    <barra-superior></barra-superior>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l10 offset-l1">
+    <h4>{{productoElegido.nombre}}</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l10 offset-l1">
+    <div class="row">
+      <div class="col l7">
+          <img src="{{productoElegido.imagen}}" class="responsive-img">
+      </div>
+      <div class="col l5">
+        <h5><p><b>Precio: </b>${{productoElegido.precio}}</p></h5>
+        <h5><p><b>Disponible: </b>{{productoElegido.disponible}}</p></h5>
+      </div>
+      <div class="col l12">
+        <button routerLink="/tienda" class="btn blue" type="button" name="button">Atras</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

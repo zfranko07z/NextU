@@ -1,0 +1,67 @@
+<div class="tienda">
+  <div class="row">
+    <div class="col l10 offset-l1 fondogris">
+      <barra-superior></barra-superior>
+    </div>
+  </div>
+
+    <div class="row">
+      <form class="col l10 offset-l1 fondoblanco" action="index.html" method="post">
+            <div class="col l8">
+              <h4>Catálogo de Productos</h4>
+            </div>
+            <div class="col l4">
+
+              <div class="col l12">
+                <div class="input-field">
+                  <h5>¿Que estas buscando?</h5>
+                  <input (input)="filtrarProducto(filtro.value)" #filtro placeholder="Buscar producto" id="buscar_producto" type="text">
+                  <!--<p>{{box.value}}</p>-->
+                </div>
+              </div>
+            </div>
+      </form>
+
+
+    <div class="row">
+      <div class="col l10 offset-l1 fondoblanco">
+        <hr size="1" style="color: #D4CACA;"/>
+          <ul class="section table-of-contents">
+            <li *ngFor="let producto of listProductos">
+              <!--<div class="row">-->
+                <div class="col l3">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="{{producto.imagen}}">
+                    </div>
+
+                    <div class="card-content">
+                      <span class="card-title"><b>{{producto.nombre}}</b></span>
+                      <p><b>Precio: </b>${{producto.precio}}</p>
+                      <p><b>Disponible: </b>{{producto.disponible}}</p>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col l9">
+
+                        <button routerLink="/detalle-producto/{{producto.id}}" type="button" name="button" class="blue btn-small">Ver más</button>
+                        <button type="button" name="button" class="blue btn-small orange left-align" [disabled]="(producto.disponible <= 0)" (click)="agregarProducto(producto.id, agregar.value)">Añadir</button>
+
+                      </div>
+                      <div class="col l3">
+                        <input type="number" [value]="1" [disabled]="(producto.disponible <= 0)" min="0" max={{producto.disponible}} class="form-control text-right" id="disponible"  #agregar>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              <!--</div>-->
+            </li>
+          </ul>
+
+      </div>
+    </div>
+</div>
+</div>

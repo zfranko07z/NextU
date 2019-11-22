@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col l10 offset-l1">
+    <barra-superior></barra-superior>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l10 offset-l1">
+    <h4>Carrito de Compras</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col l10 offset-l1">
+    <div class="row">
+      <div class="col l6">
+        <ul class="collection">
+          <li *ngFor="let producto of listaCarrito" class="collection-item avatar">
+            <img src="{{producto.imagen}}" alt="" class="circle">
+            <span class="title">{{producto.descripcion}}</span>
+            <p>Unidades: {{producto.cantidad}}<br>
+              Subtotal: ${{this.carritoService.subtotal(producto.precio, producto.cantidad)}},00
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col l6">
+        <div class="row">
+          <div class="col l12">
+            <h5 class="left-align">Total: ${{this.total()}},00</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l12">
+            <button routerLink="/tienda" (click)="this.vaciarCarrito()" type="button" name="button" class="btn-small">Cancelar</button>
+            <button routerLink="/tienda" (click)="this.vaciarCarrito()" type="button" name="button" class="btn-small">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

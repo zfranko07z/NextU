@@ -1,0 +1,37 @@
+<div class="login">
+  <div class="row form-container">
+    <div class="col l4 offset-l4">
+      <div class="card center-align">
+        <span class="card-title">Inicia Sesión</span>
+        <div class="row">
+          <form class="col l12" #formLogin="ngForm" (submit)="onLogin()" class="form-control">
+            <div class="row">
+              <div class="col l2">
+                <i class="medium material-icons">email</i>
+              </div>
+              <div class="input-field col l9 left-align">
+                <input [(ngModel)]="email" type="email" id="email" name="email" placeholder="prueba@nextu.com" class="validate" required="" aria-required="false">
+                <label for="last_name">Correo electrónico</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l2">
+                <i class="medium material-icons">lock_open</i>
+              </div>
+              <div class="input-field col l9 left-align">
+                <input [(ngModel)]="password" type="password" id="password" name="password" placeholder="123prueba" class="validate" required="" aria-required="true">
+                <label for="last_name">Contraseña</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col l12">
+                <button type="submit" class="waves-effect waves-light btn">Ingresar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
